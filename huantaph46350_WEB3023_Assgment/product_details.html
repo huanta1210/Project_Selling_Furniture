@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product_details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="themicon/themify-icons-font/themify-icons/themify-icons.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <section class="header-main-top ">
+
+            <div class="section-main container d-flex">
+                <!-- shipping -->
+                <section class=" section-ship">
+                    <a href="">Free shipping</a> <span>orders from all item !</span>
+                </section>
+                <!-- header icon -->
+                <section class="header-icon">
+                    <ul>
+                        <li>
+                            <a href=""><i class="ti-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="ti-twitter-alt" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="ti-youtube" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="ti-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="ti-google" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+        </section>
+        <!-- phần logo và thông tin các mặt hàng -->
+        <div class="header-nav container">
+            <section class="nav-main d-flex align-items-center">
+                <section class="nav-logo">
+                    <img src="img/logo-noi-that (5).jpg" alt="">
+                </section>
+
+                <section class="nav">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="">CHANDELIER</a></li>
+                        <li><a href="">WORDROBE</a></li>
+                        <li><a href="">BOOKSHELF</a></li>
+                        <li><a href="sofa.html">SOFAS</a></li>
+                        <li><a href="">TABLES</a></li>
+                    </ul>
+                </section>
+
+                <section class="nav-icon">
+                    <ul>
+                        <li>
+                            <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="sign.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </div>
+    </header>
+    <p class="line"></p>
+    <section class="container d-flex justify-content-between product-details">
+        <div class="product-details-image">
+            <h3 class="product-details-heading">Sofa Table - Coffee Table - Pine Wood Tea Table</h3>
+            <img src="img/ghe2-removebg-preview.png" alt="">
+        </div>
+        <div class="product-details-text">
+            <div class="product-heading">
+                <h3 class="heading-text">Sofa Table - Coffee Table - Pine Wood Tea Table</h3>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span><small>(22)</small></span>
+                </div>
+                <span class="sold-text">Share:<i class=" facebook-icons ti-facebook" aria-hidden="true"></i></span>
+                <span class="sold-out">Sold: <small>(389)</small></span>
+                <div class="price">
+                    <span class="product-price">$1200.00</span> <span><del class="del">$1500.00</del></span>
+                </div>
+                <form action="" method="post">
+                    <div class="color">
+                        <span class="color-text">Black</span> <br>
+                        <input type="color" name="black" class="color" id="black" value="black"  onclick="changeColor(' Black')">
+                        <input type="color" name="grey" class="color" id="grey" value="#e1dede" onclick="changeColor(' Grey')">
+                        <input type="color" name="brown" class="color" id="brown" value="#a52a2a" onclick="changeColor(' Brown')">
+                    </div>
+                    <div class="port-short">
+                        <p>
+                            <strong>Size:</strong>
+                            <span>Long 100cm x Width 50cm x Height 40cm</span>
+                        </p>
+                        <p>
+                            <strong>Material:</strong>
+                            <span>Solid pine wood, wood color walnut</span>
+                        </p>
+                        <p>
+                            <span><em>Waterproof, warping, scratches, and termites</em></span>
+                        </p>
+                    </div>
+                    <div class="select-actions clearfix">
+                        <div class="count">
+                            <input type="button" value="-" class="apart-btn">
+                            <input type="text" name="quantity" value="1" min="1" id="quantity">
+                            <input type="button" value="+" class="add-btn">
+                        </div>
+                        <div class="warp-cart">
+                            <a href="cart.html"><button type="button" id="add-to-cart" class="add-to-cart">Thêm vào giỏ hàng</button></a>
+                            <a href="pay.html"><button type="button" id="buy-now" class="add-to-cart">Mua ngay</button></a>
+                        </div>
+                    </div>
+                </form>
+                <!-- phần text miễn phí ship -->
+                <div class="info-promotion">
+                    <p>
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                        Free delivery & installation in all districts of Ho Chi Minh City and Hanoi
+                    </p>
+                    <p>
+                        <i class="fa fa-check" aria-hidden="true"></i>Free 1 for 1 exchange - 2 year warranty - Lifetime maintenance (**)
+                        <p>(*) Does not apply to the Decorations category</p>
+                        <p>(**) Does not apply to Clearance products. Warranty only 01</p>
+                        <p>five for chair frame, tray and lever for Office Chairs</p>
+                       
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <section class="d-flex justify-content-center">
+            <ul class="footer-menu">
+                <li>
+                    <h3 class="footer-heading"><a href="">Customer Servirce</a></h3>
+                </li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Track Your Order</a></li>
+                <li><a href="">Returns & Exchanges</a></li>
+                <li><a href="">Shipping Information</a></li>
+                <li><a href="">International Orders</a></li>
+                <li><a href="">Email Preferences</a></li>
+                <li><a href="">Help Topics</a></li>
+                <li><a href="">Give Us Feedback</a></li>
+            </ul>
+            <ul class="footer-menu">
+                <li>
+                    <h3 class="footer-heading"><a href="">About US</a></h3>
+                </li>
+                <li><a href="">Our Story</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Press</a></li>
+                <li><a href="">Influencers</a></li>
+                <li><a href="">Find a Store</a></li>
+                <li>
+                    <h3 class="footer-heading"><a href="">BUSINESS TO BUSINESS</a></h3>
+                </li>
+                <li><a href="">Overview</a></li>
+                <li><a href="">Trade</a></li>
+                <li><a href="">Contract</a></li>
+                <li><a href="">Corporate Gifting</a></li>
+            </ul>
+            <ul class="footer-menu">
+                <li>
+                    <h3 class="footer-heading"><a href="">DESIGN SERVICES</a></h3>
+                </li>
+                <li><a href="">Free Interior Design</a></li>
+                <li><a href="">Room Planner</a></li>
+                <li>
+                    <h3 class="footer-heading"><a href="">RESOURCES</a></h3>
+                </li>
+                <li><a href="">Pottery Barn Credit Card</a></li>
+                <li><a href="">Pay Bill Online</a></li>
+                <li><a href="">View Online Catalog</a></li>
+                <li><a href="">Request a Catalog</a></li>
+                <li><a href="">Address Change</a></li>
+                <li><a href="">Gift Cards</a></li>
+                <li><a href="">Do Not Sell Or Share My Personal Information</a></li>
+            </ul>
+            <div class="social-icons">
+                <!-- form đăng nhập -->
+                <div class="footer-email-sign-up">
+                    <p class="footer-email-text">Join our VIP list for inspiration, new arrivals & more.</p>
+                    <form action="">
+                        <label for="footer-email-sign-up" class="hiden">Join our VIP list for inspiration, new arrivals
+                            & more.</label>
+                        <div class="footer-sign-up d-flex justify-content-between">
+                            <input type="email" name="email" id="email" placeholder="Enter Your Email">
+                            <div class="Submit"><a href="sign.html">Sign Up</a></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="footer-fanacials">
+                    <p>California residents, please see the<a href=""> Financial Incentive Terms for terms.</a></p>
+                    <p></p>
+                </div>
+                <div style="text-align: center;"></div>
+                <div class="footer-list">
+                    <p class="social-icons">FOLLOW US</p>
+                    <ul class="social-icons-list ">
+                        <li>
+                            <a href="#"><i class=" icons-items ti-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class=" icons-items ti-twitter-alt" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class=" icons-items ti-youtube" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class=" icons-items ti-instagram" aria-hidden="true"></i></a>
+                        </li>
+                       
+                    </ul>
+                </div>
+                <div class="footer-legal">
+                    <div class="text-section">
+                        <p>*Some exclusions apply. Click <a href="">here</a> for details</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+    </footer>
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
