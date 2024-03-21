@@ -29,7 +29,8 @@
                     <form action="index.php?act=capnhatkhachsan" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="">Tên khách sạn:</label> <br>
-                            <input type="text" name="tenkhachsan" id="" value="<?php echo $khachSan['name']?>">
+                            <input type="text" name="tenkhachsan" id=""
+                                value="<?php echo $khachSan['name_khach_san']?>">
                         </div>
                         <div class="form-group">
                             <label for="">Ảnh khách sạn:</label> <br>

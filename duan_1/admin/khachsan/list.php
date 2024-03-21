@@ -40,10 +40,10 @@
                             }
                             $update = "index.php?act=updatekhachsan&id=".$id_khach_san;
                             $delete = "index.php?act=deletekhachsan&id=".$id_khach_san;
-                            $thongbao = "Bạn có chắc chắn muốn xoá tiêu đề". $name;
+                            $thongbao = "Bạn có chắc chắn muốn xoá tiêu đề". $name_khach_san;
                             echo '
                                 <tr>
-                                    <td>'.$name.'</td>
+                                    <td>'.$name_khach_san.'</td>
                                     <td>'.$image.'</td>
                                     <td>'.$sdt_khach_san.'</td>
                                     <td>'.$address.'</td>

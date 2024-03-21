@@ -1,4 +1,4 @@
-* {
+/* * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -8,7 +8,7 @@
 html {
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
-}
+} */
 
 .header-main-top {
     height: 50px;
@@ -113,33 +113,41 @@ html {
 .line {
     border-bottom: 1px solid #bbb8b8;
 }
+
+.product-details-image {
+    padding-right: 100px;
+}
+
 .product-details .product-details-heading {
-    margin: 1.5rem 0 0 0;
     font-size: .8125rem;
     text-transform: uppercase;
     font-weight: 400;
     color: inherit;
 }
+
 .rating {
     display: inline-block;
-    margin: 0.3rem 0.6rem 0 0 ;  
+    margin: 0.3rem 0.6rem 0 0;
 }
+
 .rating .star {
     color: #ff4500;
 }
+
 .product-details .heading-text {
-    margin: 1.5rem 0 0.6rem 0;
     font-size: 1.125rem;
     text-transform: uppercase;
     font-weight: 600;
     color: inherit;
 }
+
 .product-heading .sold-text {
     margin: 1.5rem 0 0 10rem;
     font-size: .8125rem;
     font-weight: 400;
     color: inherit;
 }
+
 .facebook-icons {
     color: #fff;
     font-size: 1rem;
@@ -148,12 +156,14 @@ html {
     border-radius: 50%;
     background-color: blue;
 }
+
 .product-heading .sold-out {
     margin: 1.5rem 0 0 0.5rem;
     font-size: .8125rem;
     font-weight: 400;
     color: inherit;
 }
+
 .product-heading .price {
     margin: 1.5rem 0 0 0;
     border-bottom: 1px solid #e1dede;
@@ -161,29 +171,35 @@ html {
     height: 50px;
     line-height: 50px;
 }
+
 .product-price {
     color: #ff4500;
     font-size: 1.2rem;
 }
+
 .product-heading .del {
     font-size: 0.8rem;
     color: #bbb8b8
 }
+
 .product-heading .color {
     margin: 0.6rem 0;
     border-bottom: 1px solid #e1dede;
-    
+
 }
+
 .product-heading .color-text {
     margin: 0 0 0.8rem 0;
     font-size: .9125rem;
     font-weight: 300;
     color: inherit;
 }
+
 .port-short p {
     font-size: .8125rem;
     font-weight: 400;
 }
+
 .product-heading input.apart-btn,
 .product-heading input.add-btn {
     float: left;
@@ -198,6 +214,7 @@ html {
     text-align: center;
     border-radius: 2;
 }
+
 .product-heading input#quantity {
     background: #fff;
     font-weight: 600;
@@ -212,9 +229,10 @@ html {
     border-radius: 1px;
     float: left;
 }
+
 .color {
-  border-radius: 50%;
-  border: none;
+    border-radius: 50%;
+    border: none;
 }
 
 .select-actions .add-to-cart {
@@ -231,8 +249,9 @@ html {
 #add-to-cart {
     color: #e1dede;
     border: none;
-    background:#27678f ;
+    background: #27678f;
 }
+
 #buy-now {
     color: #e1dede;
     border: none;
@@ -242,21 +261,23 @@ html {
 .warp-cart #add-to-cart:hover {
     background-color: #fff;
     color: #000;
-    border:1px solid #27678f;
+    border: 1px solid #27678f;
     transition: .5s;
 }
+
 .warp-cart #buy-now:hover {
     background-color: #fff;
     color: #000;
-    border:1px solid #ef683a;
+    border: 1px solid #ef683a;
     transition: .5s;
-} 
+}
 
 .info-promotion p {
     font-size: .8125rem;
     font-weight: 400;
     color: inherit;
 }
+
 body footer {
     border-top: none;
     background: #E6E3DF;
@@ -322,7 +343,7 @@ body footer .footer-email-text {
 body footer form [type="email"] {
     border: none;
     padding: 0.425rem;
-    width:  70%;
+    width: 70%;
     font-size: .875rem;
     font-family: Arial;
     border: 1px solid #000;
@@ -384,9 +405,11 @@ ul.social-icons-list {
     font-family: inherit;
     width: auto;
 }
+
 footer .footer-list {
     margin-bottom: 17px;
 }
+
 .footer-list ul li a {
     text-decoration: none;
     font-size: 20px;
@@ -401,10 +424,12 @@ footer .footer-list {
     font-family: inherit;
     width: auto;
 }
+
 .footer-legal .text-section p a {
     text-decoration: underline;
     color: #333;
 }
+
 .section-ship a {
     font-weight: 500;
     animation: changeColor 2s infinite alternate;
@@ -419,6 +444,3 @@ footer .footer-list {
         color: #53ad12
     }
 }
-
-
-

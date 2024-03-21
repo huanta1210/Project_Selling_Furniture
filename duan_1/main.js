@@ -112,7 +112,7 @@ function Validate(formSelector) {
         }
         // kh ikhoong có lỗi submitform
         if (isValid) {
-            alert('Đăng nhập thành công');
+            alert('Đăng ký thành công');
         }
     }
 }

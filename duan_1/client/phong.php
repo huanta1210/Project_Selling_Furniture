@@ -1,179 +1,96 @@
-<div class="container">
-    <!-- phần nội dung chính -->
-    <div class="row mb">
-        <!--nội dung bên trái -->
-        <div class="boxtrai mr col-7">
-            <div class="moi">
-                <p>
-                    <ion-icon name="pricetags-outline"></ion-icon>
-                    Sao phải trả nhiều hơn khi luôn có giá rẻ hơn trên App - Click dấu "?" bên phải để tải ngay
-                    ứng dụng Traveloka và đặt khách sạn rẻ hơn!
-                    <ion-icon name="help-circle-outline"></ion-icon>
-                </p>
-            </div>
-            <div class="boxsp mr">
-                <?php 
-                    $i = 0;
-                    foreach ($listPhong as $room) {
-                        extract($room);
-                        $image = $imgPath.$img;
-                        $linksp = "index.php?act=phongct&idsp=".$id_phong;
-                        
-                       echo '
-                           <a href="'.$linksp.'">
-                               <img src="'.$image.'" alt="">
-                           </a>
-                           <div class="boxsp-title">
-                               <div class="title">
-                                   <a href="'.$linksp.'">'.$name.'</a>
-                               </div>
-                               <p class="map">
-                                   <ion-icon name="map-outline"></ion-icon>Khách sạn '.$address.'    
-                               </p>
-                               <div class="price">
-                                   <span>$'.$price.'</span>
-                               </div>
-                           </div> 
-                           ';
-                           $i = $i + 1;
-                    }
-                ?>
+<section class="header-banner">
 
-            </div>
+    <section class="banner">
+        <img src="../img/modern-interior-design-grey-living-room2.webp" alt="">
+    </section>
 
+    <section class="banner-angle-left">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+    </section>
+
+    <section class="banner-angle-right">
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+    </section>
+
+    <section class="section-text">
+        <div>
+            <h3>WOODEN</h3>
+            <h4>LEIBAL PLAIN SOFA</h4>
+            <p>A goodlooking and comfortable</p>
         </div>
-        <!-- nội dung bên phải -->
-        <div class="boxphai col-4">
-            <div class=" mb">
-                <div class="boxtitle">Phạm vi giá</div>
-                <div class="boxcontent2 menudoc">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <input type="number" min="100000" max="3000000" value="100000" step="100000">
-                                Giá
-                                tiền
-                            </a>
-                        </li>
-                    </ul>
+    </section>
+    <section class="section-shop-now">
+        <a href="">SHOP NOW</a>
+    </section>
+
+</section>
+
+</header>
+<main>
+    <section class="container section-main">
+        <h3>WE LOVE TREND</h3>
+        <p class="p-line"></p>
+        <section class="section-product-portfolio d-flex justify-content-center">
+            <?php 
+
+        foreach ($danhMucPhong as $loaiPhong) {
+            extract($loaiPhong);
+            $linkLoaiPhong = "index.php?act=phong&id_loaiphong=".$id_loaiphong;
+            echo '
+                <div class="product-portfolio style="margin-bottom:10px"">
+                    <a href="'.$linkLoaiPhong.'">'.$ten_loaiphong.'</a>
                 </div>
+            ';
+        }
+        ?>
+        </section>
 
+    </section>
+    <section class="product-lists container ">
+        <?php 
+                foreach ($listLoaiPhong as $room) {
+                    extract($room);
+                    $image = $imgPath.$img;
+                    $linksp = "index.php?act=phongct&idphong=".$id_phong;
+                    echo '
+                            <div class="product-items">
+                            <a href="'.$linksp.'"><img src="'.$image.'" alt="Ảnh ghế"></a>
+                            <div class="rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <p class="product-text"><a href="'.$linksp.'">'.$name.'</a></p>
+                            <p class="product-price"><a href="'.$linksp.'">$ '.$price.'</a></p>
+                            <div class="add-cart">
+                                <a href="">Thêm vào giỏ hàng<i class="fa fa-cart-plus" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    ';
+                }  
+            ?>
+
+    </section>
+
+    <section class="section-slider d-flex">
+        <div class="slider-left">
+            <div class="slider-left-text">
+                <h3>New Arrivals</h3>
+                <p>Furturne Collection</p>
+                <button>Buy Now</button>
             </div>
-            <div class=" mb">
-                <div class="boxtitle">Tiện nghi</div>
-                <div class="boxcontent2 menudoc">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <input type="checkbox">Wifi
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <input type="checkbox">Hồ bơi
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <input type="checkbox">Chỗ đậu xe
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <input type="checkbox">Thang máy
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <input type="checkbox">Phòng họp
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <input type="checkbox">Lễ tân 24h
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-            <div class="mb">
-                <div class="boxtitle">Ưu tiên nơi nghỉ</div>
-                <div class="boxcontent2 menudoc">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <input type="radio">All
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <input type="radio">Thanh toán tại khách sạn
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <input type="radio">Chọn nhiều nhất
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <input type="radio">Phù hợp với gia đình
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <input type="radio">Nhà nghỉ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <input type="radio">Ưu đãi đặc biệt
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-            <div class=" mb">
-                <div class="boxtitle">Loại hình lưu chú</div>
-                <div class="boxcontent2 menudoc">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <input type="checkbox">All
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <input type="checkbox">Nhà nghỉ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <input type="checkbox">Căn hộ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <input type="checkbox">Khách sạn
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <input type="checkbox">Khu nghỉ dưỡng
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <input type="checkbox">Nhà nghỉ Homestay
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-
         </div>
-    </div>
-</div>
+        <div class="slider-right">
+            <div class="slider-right-text">
+                <h3>Elegants Design</h3>
+                <p>Furturne Collection</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+</main>

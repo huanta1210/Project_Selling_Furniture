@@ -1,172 +1,104 @@
-<body>
-    <div class="container">
-        <!-- phần nội dung chính -->
-        <div class="row mb">
-            <!--nội dung bên trái -->
-            <div class="boxtrai mr col-7">
-                <div class="moi">
-                    <p>
-                        <ion-icon name="pricetags-outline"></ion-icon>
-                        Sao phải trả nhiều hơn khi luôn có giá rẻ hơn trên App - Click dấu "?" bên phải để tải ngay
-                        ứng dụng Traveloka và đặt khách sạn rẻ hơn!
-                        <ion-icon name="help-circle-outline"></ion-icon>
-                    </p>
-                </div>
+<section class="header-banner">
 
+    <section class="banner">
+        <img src="../img/modern-interior-design-grey-living-room2.webp" alt="">
+    </section>
 
-                <?php 
-                    foreach ($rooms as $room) {
-                        extract($room);
-                        $image = $imgPath.$img;
-                        $linksp = "index.php?act=phongct&idphong=".$id_phong;
-                        
-                       echo '
-                       <div class="boxsp mr">
-                           <a href="'.$linksp.'">
-                               <img src="'.$image.'" alt="">
-                           </a>
-                           <div class="boxsp-title">
-                               <div class="title">
-                                   <a href="'.$linksp.'">'.$name.'</a>
-                               </div>
-                               <div class="map">
-                                   <ion-icon name="map-outline"></ion-icon>Khách sạn ở '.$address.'   
-                               </div> 
-                               <div class="quantity">
-                                    <span><i class="fa fa-bed" aria-hidden="true"></i>' .$suc_chua.'</span>
-                                </div>
-                               <div class="price">
-                                   <span>$'.$price.'</span>
-                               </div>
-                               <div class="put">
-                                   <form action="index.php?act=themphong" method="POST">
-                                       <input type="hidden" name="id" value="'.$id_phong.'">
-                                       <input type="hidden" name="name" value="'.$name.'">
-                                       <input type="hidden" name="price" value="'.$price.'">
-                                       <input type="hidden" name="img" value="'.$img.'">
-                                       <input type="submit" name="themphong" value="Đặt phòng">
-                                   </form>
-                               </div>
-                           </div> 
-                           </div>
-                           ';
-                    }
-               ?>
-            </div>
+    <section class="banner-angle-left">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+    </section>
 
-            <!-- nội dung bên phải -->
-            <div class="boxphai col-4">
-                <div class=" mb">
-                    <div class="boxtitle">Phạm vi giá</div>
-                    <div class="boxcontent2 menudoc">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <input type="number" min="100000" max="3000000" value="100000" step="100000">
-                                    Giá
-                                    tiền
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+    <section class="banner-angle-right">
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+    </section>
 
-                </div>
-                <div class=" mb">
-                    <div class="boxtitle">Danh mục phòng</div>
-                    <div class="boxcontent2 menudoc">
-                        <ul>
-                            <?php
-                                foreach($danhMucPhong as $phong) {
-                                 extract($phong);
-                                 $linkDanhMuc = "index.php?act=phong&iddm=".$id_loaiphong;   
-                                    echo '
-                                    <li>
-                                        <a href="'.$linkDanhMuc.'"><input type="checkbox">'.$ten_loaiphong.'</a>
-                                    </li>';
-                                }
-                            
-                            ?>
-                        </ul>
-                    </div>
-
-                </div>
-                <div class="mb">
-                    <div class="boxtitle">Ưu tiên nơi nghỉ</div>
-                    <div class="boxcontent2 menudoc">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <input type="radio">All
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <input type="radio">Thanh toán tại khách sạn
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <input type="radio">Chọn nhiều nhất
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <input type="radio">Phù hợp với gia đình
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <input type="radio">Nhà nghỉ
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <input type="radio">Ưu đãi đặc biệt
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-                <div class=" mb">
-                    <div class="boxtitle">Loại hình lưu chú</div>
-                    <div class="boxcontent2 menudoc">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <input type="checkbox">All
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <input type="checkbox">Nhà nghỉ
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <input type="checkbox">Căn hộ
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <input type="checkbox">Khách sạn
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <input type="checkbox">Khu nghỉ dưỡng
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <input type="checkbox">Nhà nghỉ Homestay
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-            </div>
+    <section class="section-text">
+        <div>
+            <h3>WOODEN</h3>
+            <h4>LEIBAL PLAIN SOFA</h4>
+            <p>A goodlooking and comfortable</p>
         </div>
-    </div>
+    </section>
+    <section class="section-shop-now">
+        <a href="">SHOP NOW</a>
+    </section>
+
+</section>
+
+</header>
+<main>
+    <section class="container section-main">
+        <h3>WE LOVE TREND</h3>
+        <p class="p-line"></p>
+        <section class="section-product-portfolio d-flex justify-content-center">
+            <?php 
+                foreach ($danhMucPhong as $loaiPhong) {
+                    extract($loaiPhong);
+                    $linkLoaiPhong = "index.php?act=phong&id_loaiphong=".$id_loaiphong;
+                    echo '
+                        <div class="product-portfolio">
+                            <a href="'.$linkLoaiPhong.'">'.$ten_loaiphong.'</a>
+                        </div>
+            
+                    ';
+                }
+            ?>
+        </section>
+        <section class="product-lists container ">
+            <?php 
+            $i = 0;
+                foreach ($rooms as $room) {
+                    extract($room);
+                    $image = $imgPath.$img;
+                    $linksp = "index.php?act=phongct&idphong=".$id_phong;
+                    echo '
+                            <div class="product-items">
+                            <a href="'.$linksp.'"><img src="'.$image.'" alt="Ảnh ghế"></a>
+                            <div class="rating">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <p class="product-text"><a href="'.$linksp.'">'.$name.'</a></p>
+                            <p class="product-price"><a href="'.$linksp.'">$ '.$price.'</a></p>
+                            <div class="add-cart">
+                                <form action="index.php?act=addcart" method="POST">
+                                    <input type="hidden" name="idphong" value="'.$id_phong.'">
+                                    <input type="hidden" name="name" value="'.$name.'">
+                                    <input type="hidden" name="price" value="'.$price.'">
+                                    <input type="hidden" name="img" value="'.$img.'">
+                                    <a href=""><i class="fa fa-cart-plus" aria-hidden="true"></i><input type="submit" name="addcart" value="Thêm vào giỏ hàng"></a>
+                                    
+                                </form>
+                                
+                            </div>
+                        </div>
+                    ';
+                }   
+                $i++; 
+            ?>
+
+        </section>
+
+        <section class="section-slider d-flex">
+            <div class="slider-left">
+                <div class="slider-left-text">
+                    <h3>New Arrivals</h3>
+                    <p>Furturne Collection</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+            <div class="slider-right">
+                <div class="slider-right-text">
+                    <h3>Elegants Design</h3>
+                    <p>Furturne Collection</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+</main>

@@ -7,7 +7,7 @@ function loadKhachSan() {
 }
 
 function insertKhachSan($tenkhachsan,$anhkhachsan,$sdtkhachsan,$diachi) {
-    $sql = "INSERT INTO khach_san(name,anh_khach_san,sdt_khach_san,address) VALUES ('$tenkhachsan','$anhkhachsan','$sdtkhachsan','$diachi')";
+    $sql = "INSERT INTO khach_san(name_khach_san,anh_khach_san,sdt_khach_san,address) VALUES ('$tenkhachsan','$anhkhachsan','$sdtkhachsan','$diachi')";
     pdo_execute($sql);
 }
 
@@ -26,9 +26,9 @@ function loadOneKhachSan() {
 
 function updateKhachSan($id,$tenkhachsan,$anh_khach_san,$sdtkhachsan,$diachi) {
     if($anh_khach_san != "") {
-        $sql ="UPDATE khach_san SET name ='$tenkhachsan', anh_khach_san ='$anh_khach_san', sdt_khach_san ='$sdtkhachsan', address ='$diachi' WHERE id_khach_san = '$id'";
+        $sql ="UPDATE khach_san SET name_khach_san ='$tenkhachsan', anh_khach_san ='$anh_khach_san', sdt_khach_san ='$sdtkhachsan', address ='$diachi' WHERE id_khach_san = '$id'";
     } else {
-        $sql ="UPDATE khach_san SET name ='$tenkhachsan', sdt_khach_san ='$sdtkhachsan', address ='$diachi' WHERE id_khach_san = '$id'";
+        $sql ="UPDATE khach_san SET name_khach_san ='$tenkhachsan', sdt_khach_san ='$sdtkhachsan', address ='$diachi' WHERE id_khach_san = '$id'";
 
     }
     pdo_execute($sql);
