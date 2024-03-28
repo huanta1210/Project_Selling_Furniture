@@ -6,33 +6,46 @@
                 <table class="table cart-table">
                     <thead class="cart-row">
                         <tr>
-                            <th colspan="2" class="text-center">Thông tin sản phẩm</th>
-                            <th class="text-center">Đơn giá</th>
-                            <th class="text-center">Số lượng</th>
+                            <th colspan="2" class="text-center">Thông tin phòng</th>
+                            <th class="text-center">Loại phòng</th>
+                            <th class="text-center">Giá</th>
+                            <th class="text-center">Sức chứa</th>
+                            <th class="text-center">Ngày đặt phòng</th>
+                            <th class="text-center">Ngày trả phòng</th>
                             <th class="text-right">Tổng giá</th>
+                            <th>Xoá</th>
+
                         </tr>
                     </thead>
+
                     <tbody class="cart-row">
-                        <tr>
-                            <td><a href=""><img class="image"
-                                        src="img/Ghế_cafe_gỗ_đệm_da_phong_cách-removebg-preview.png" alt=""></a>
-                            </td>
-                            <td class="cart-text">_Sofa Table - Coffee Table - Pine Wood Tea Table
-                                <br>
-                                <small class="small">Brown</small> <br>
-                                <a class="remove-cart" href="">Xoá</a>
-                            </td>
-                            <td><span>$1200.00</span></td>
-                            <td class="quantity">
-                                <!-- <div class="count">
-                                        <input type="button" value="-" class="apart-btn">
-                                        <input type="text" name="quantity" value="1" min="1" id="quantity" onchange="totalBill()">
-                                        <input type="button" value="+" class="add-btn">
-                                    </div> -->
-                                <input type="number" name="" id="quantity" onchange="totalBill()">
-                            </td>
-                            <td><span class="totalAmount">$1200.00</span></td>
-                        </tr>
+                        <?php
+                        $tong = 0;
+                        $i = 0;
+                        foreach ($_SESSION['cart'] as $cart) {
+                            $tong += $cart[3];
+                            $image = $imgPath.$cart[2];
+                            $xoa = '<a class="remove-cart" href="index.php?act=delcart&iddatphong='.$i.'"><input type="button" value="Xoá"></a>';
+                
+                            echo '
+                                <tr>
+                                    <td><a href=""><img class="image" src="'.$image.'" alt=""></a> </td>
+                                    <td class="cart-text"> '.$cart[1].'  </td>
+                                    <td> '.$cart[4].'</td>
+                                    
+                                    <td><span class="totalAmount">$'.$cart[3].'</span></td>
+                                    <td> '.$cart[5].'</td>
+                                    <td> ' .$cart[6].'</td>  
+                                    <td> ' .$cart[7].'</td>  
+                                    <td> $'.$cart[3].'</td>  
+                
+                                    <td>'.$xoa.'</td>
+                                </tr>  
+                            '; $i += 1;
+                            
+                
+                        }
+                        ?>
                     </tbody>
                 </table>
                 <div class="d-grid cart-row">
@@ -41,15 +54,19 @@
                         <textarea name="" id="" cols="80" rows="5"></textarea>
                     </div>
                     <div class="grid-items">
+
+
                         <p class="text-right">
                             <span>Tổng tiền:</span>
-                            <span class="totalAmounts">0</span>
+                            <span class="totalAmounts"><?php echo $tong .'$'?></span>
                         </p>
+
                         <p class="text-bottom"><em>Vận chuyển</em></p>
                         <button type="submit" id="btn" name="update" class="btn btn-primary"><a
                                 href="index.php?act=phong">Cập
                                 nhật</a></button>
-                        <button type="submit" id="btn" name="check-out" class="btn btn-primary"><a href="pay.html">Thanh
+                        <button type="submit" id="btn" name="check-out" class="btn btn-primary"><a
+                                href="index.php?act=bill">Thanh
                                 toán</a></button>
 
                     </div>

@@ -54,14 +54,17 @@
                             <input type="date" name="ngaydatphong" id="" value=<?php echo $phong['ngay_dat_phong'] ?>>
                         </div>
                         <div class="form-group">
+                            <label for="">Ngày trả phòng:</label> <br>
+                            <input type="date" name="ngaytraphong" id="" value=<?php echo $phong['ngay_tra_phong'] ?>>
+                        </div>
+                        <div class="form-group">
                             <label for="">Ảnh phòng:</label> <br>
                             <?=$image?> <br> <br>
                             <input type="file" name="anhphong" id="">
                         </div>
                         <div class="form-group">
                             <label for="">Mô tả phòng:</label> <br>
-                            <textarea name="mota" id="" cols="20" rows="5"
-                                value=<?php echo $phong['mo_ta'] ?>></textarea>
+                            <textarea name="mota" id="" cols="20" rows="5"><?php echo $phong['noidung_binhluan'] ?></textarea>
                         </div>
                         <div class="form-group">
                             <label for="">Sức chứa phòng:</label> <br>
@@ -74,8 +77,7 @@
                                 <?php
                                     foreach($listkhachsan as $khachSan) {
                                         extract($khachSan);
-                                        print_r($khachSan);
-                                        echo '<option value="'.$id_khach_san.'">'.$name.'</option>';
+                                        echo '<option value="'.$id_khach_san.'">'.$name_khach_san.'</option>';
                                     }
                                 ?>
                             </select>

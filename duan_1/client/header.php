@@ -86,11 +86,10 @@
                             <a href="index.php?act=dangky"><i class="fa fa-user" aria-hidden="true"></i></a>
                             <ul class="sub-nav">
                                 <li><a href="index.php?act=dangky">Đăng ký</a></li> <br>
-
                                 <?php echo $user_taikhoan ?>
                                 <?php if(isset($vaitro_taikhoan)) { ?>
                                 <?php if($vaitro_taikhoan == 1) { ?>
-                                <li><a href="index.php?act=dangnhapadmin">Đăng nhập quản trị</a></li>
+                                <li><a href="../admin/index.php">Đăng nhập quản trị</a></li>
                                 <?php } ?>
                                 <li><a href="index.php?act=thoat">Thoát</a></li>
                                 <?php } else { ?>
@@ -100,7 +99,7 @@
 
                         </li>
                         <li>
-                            <a href="index.php?act=cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                            <a href="index.php?act=addcart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </section>

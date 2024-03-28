@@ -30,7 +30,7 @@
             <div class="price">
                 <span class="product-price">$'.$price.'</span> <span><del class="del">$1500.00</del></span>
             </div>
-            <form action="" method="post">
+            <form action="index.php?act=addcart" method="post">
                 <div class="port-short">
                     <p>
                         <strong><i class="fa fa-users" aria-hidden="true"></i></strong>
@@ -41,17 +41,39 @@
                         <span>'.$address.'</span>
                     </p>
                     <p>
-                        <strong>Danh mục phòng:</strong>
+                        <strong>Loại phòng:</strong>
                         <span>'.$ten_loaiphong.'</span>
+                    </p>
+                    <p>
+                        <strong>Ngày nhận phòng:</strong>
+                        <span><input type="date" name="ngay_dat_phong" id=""></span>
+                    </p>
+                    <p>
+                        <strong>Ngày trả phòng:</strong>
+                        <span><input type="date" name="ngay_tra_phong" id=""></span>
                     </p>
             
                 </div>
                 <div class="select-actions clearfix">
                     <div class="warp-cart">
-                        <a href="index.php?act=cart"><button type="button" id="add-to-cart" class="add-to-cart">Chọn phòng</button></a>
+                                                   
+                    </div>
                     </div>
                 </div>
-            </form>
+                <input type="hidden" name="idphong" value="'.$id_phong.'">
+                <input type="hidden" name="name" value="'.$name.' - Hotel: ' .$name_khach_san.'">
+                <input type="hidden" name="loaiphong" value="'.$ten_loaiphong.'">
+                <input type="hidden" name="price" value="'.$price.'">
+                <input type="hidden" name="succhua" value="'.$suc_chua.'">
+                <input type="hidden" name="ngaydatphong" value="'.$ngay_dat_phong.'">
+                <input type="hidden" name="ngaytraphong" value="'.$ngay_tra_phong.'">
+
+                <input type="hidden" name="img" value="'.$img.'">
+                
+                <input type="submit" id="add-to-cart" onclick=return confirm("Thêm thành công") name="addcart" value="Chọn phòng" style="border-radius: 5px; width: 100%; padding: 5px; background-color: #ef683a; color: #fff; border: 1px solid #ef683a; transition: background-color 0.5s, color 0.5s, border-color 0.5s;">
+                
+            
+                </form>
             <!-- phần text miễn phí ship -->
             <div class="info-promotion">
                 <p>
@@ -75,5 +97,26 @@
             ';
         ?>
         </div>
+
     </div>
+    
 </section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#comment-text").load("binhluan/binhluan.php", {id_phong: <?=$id_phong?>});
+});
+</script>
+
+    <div class="container">
+        <div class="comment">
+            
+            <div id="comment-text">
+            </div>
+        </div>
+        
+    </div>
+
+   
+    

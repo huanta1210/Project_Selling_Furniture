@@ -63,17 +63,7 @@
                             </div>
                             <p class="product-text"><a href="'.$linksp.'">'.$name.'</a></p>
                             <p class="product-price"><a href="'.$linksp.'">$ '.$price.'</a></p>
-                            <div class="add-cart">
-                                <form action="index.php?act=addcart" method="POST">
-                                    <input type="hidden" name="idphong" value="'.$id_phong.'">
-                                    <input type="hidden" name="name" value="'.$name.'">
-                                    <input type="hidden" name="price" value="'.$price.'">
-                                    <input type="hidden" name="img" value="'.$img.'">
-                                    <a href=""><i class="fa fa-cart-plus" aria-hidden="true"></i><input type="submit" name="addcart" value="Thêm vào giỏ hàng"></a>
-                                    
-                                </form>
-                                
-                            </div>
+                            
                         </div>
                     ';
                 }   

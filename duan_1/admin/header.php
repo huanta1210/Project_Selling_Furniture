@@ -17,7 +17,7 @@
 <body>
     <div class="main">
         <div class="nav d-flex justify-content-end">
-            <a href=""><i class="fa fa-sign-in" aria-hidden="true"></i></a>
+            <a href="../client/index.php"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
         </div>
 
         <div class="main-box row">
@@ -42,13 +42,13 @@
 
                         <li><a href="index.php?act=quanliphong"><i class="fa fa-bed" aria-hidden="true"></i> Quản lí
                                 phòng</a></li>
-                        <li><a href=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Quản lí đặt phòng</a>
+                       
+                        <li><a href="index.php?act=quanlinhantraphong"><i class="fa fa-check-square" aria-hidden="true"></i> Quản lí nhận trả phòng</a>
                         </li>
-                        <li><a href=""><i class="fa fa-check-square" aria-hidden="true"></i> Quản lí nhận trả phòng</a>
-                        </li>
-                        <li><a href=""><i class="fa fa-comments" aria-hidden="true"></i> Quản lí bình luận</a></li>
-                        <li><a href=""><i class="fa fa-id-card" aria-hidden="true"></i> Quản lí người dùng</a></li>
-                        <li><a href=""><i class="fa fa-bar-chart" aria-hidden="true"></i> Thống kê</a></li>
+                        <li><a href="index.php?act=quanlibinhluan"><i class="fa fa-comments" aria-hidden="true"></i> Quản lí bình luận</a></li>
+                        <li><a href="index.php?act=quanlinguoidung"><i class="fa fa-id-card" aria-hidden="true"></i>
+                                Quản lí người dùng</a></li>
+                        <li><a href="index.php?act=bieudo"><i class="fa fa-bar-chart" aria-hidden="true"></i> Thống kê</a></li>
                         <li><a href=""><i class="fa fa-cogs" aria-hidden="true"></i> Cài đặt hệ thống</a></li>
 
                     </ul>

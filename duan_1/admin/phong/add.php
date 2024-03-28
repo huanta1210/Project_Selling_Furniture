@@ -39,6 +39,10 @@
                             <input type="date" name="ngaydatphong" id="">
                         </div>
                         <div class="form-group">
+                            <label for="">Ngày trả phòng:</label> <br>
+                            <input type="date" name="ngaytraphong" id="">
+                        </div>
+                        <div class="form-group">
                             <label for="">Ảnh phòng:</label> <br>
                             <input type="file" name="anhphong" id="">
                         </div>
@@ -57,7 +61,7 @@
                                 <?php
                                     foreach($listkhachsan as $khachSan) {
                                         extract($khachSan);
-                                        echo '<option value="'.$id_khach_san.'">'.$name.'</option>';
+                                        echo '<option value="'.$id_khach_san.'">'.$name_khach_san.'</option>';
                                     }
                                 ?>
                             </select>

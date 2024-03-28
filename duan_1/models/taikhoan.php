@@ -23,9 +23,9 @@
     //     return $result;
     // }
 
-    // function loadAllTaiKhoan() {
-    //     $sql = "SELECT * FROM taikhoan ORDER BY id DESC ";
-    //     $listTaiKhoan = pdo_query("$sql");
-    //     return $listTaiKhoan;
-    // }
+    function loadAllTaiKhoan() {
+        $sql = "SELECT * FROM taikhoan ORDER BY id_taikhoan DESC ";
+        $listTaiKhoan = pdo_query("$sql");
+        return $listTaiKhoan;
+    }
 ?>

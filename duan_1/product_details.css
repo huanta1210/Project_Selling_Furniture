@@ -246,10 +246,15 @@ html {
     width: 100%;
 }
 
+
+
 #add-to-cart {
     color: #e1dede;
     border: none;
     background: #27678f;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 #buy-now {
@@ -258,7 +263,7 @@ html {
     background: #ef683a;
 }
 
-.warp-cart #add-to-cart:hover {
+#add-to-cart:hover {
     background-color: #fff;
     color: #000;
     border: 1px solid #27678f;

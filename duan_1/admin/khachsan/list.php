@@ -48,7 +48,6 @@
                                     <td>'.$sdt_khach_san.'</td>
                                     <td>'.$address.'</td>
                                     <td><a class="update" href="'.$update.'"><i class="fa fa-wrench" aria-hidden="true"></i><input type="button" value="Sửa "></a></td>
-                                    <td><a class="delete" href="'.$delete.'" onclick="return confirm(\''.$thongbao.'\')" role="button" ><i class="fa fa-trash" aria-hidden="true"></i><input type="button" value="Xoá "></a></td>
                                 </tr>
                             
                             ';

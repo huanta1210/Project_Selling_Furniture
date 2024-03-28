@@ -85,7 +85,7 @@ option {
 
 
 .form-submit {
-    margin: 30px 0 0 200px;
+    margin: 0;
     border-radius: 4px;
     font-weight: 500;
     padding: 1.0em 1.7em;
@@ -235,6 +235,7 @@ table {
     width: 100%;
     font-size: 1em;
 }
+
 td:first-child {
     font-size: 1.1rem;
     color: #817f7f;

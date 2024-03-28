@@ -4,6 +4,8 @@ include "header.php";
 include "../models/danhmuc.php";
 include "../models/khachsan.php";
 include "../models/phong.php";
+include "../models/taikhoan.php";
+include "../models/binhluan.php";
 
 include "../models/pdo.php";
 
@@ -134,6 +136,7 @@ if(isset($_GET['act'])) {
             break;
         // quản lí phòng
         case 'quanliphong':
+           
             $listPhong = loadPhong();
             include "phong/list.php";
             break;
@@ -143,6 +146,8 @@ if(isset($_GET['act'])) {
                 $tenphong = $_POST['tenphong'];
                 $giaphong = $_POST['giaphong'];
                 $ngaydatphong = $_POST['ngaydatphong'];
+                $ngaytraphong = $_POST['ngaytraphong'];
+
                 $id_khach_san = $_POST['id_khach_san'];
                 
                 $img = $_FILES['anhphong']['name'];
@@ -153,7 +158,7 @@ if(isset($_GET['act'])) {
                 $succhua = $_POST['succhua'];
                 $idloaiphong = $_POST['id_loaiphong'];
 
-                insertPhong($tenphong,$giaphong,$ngaydatphong,$img,$mota,$succhua,$idloaiphong,$id_khach_san); 
+                insertPhong($tenphong,$giaphong,$ngaydatphong,$ngaytraphong,$img,$mota,$succhua,$idloaiphong,$id_khach_san); 
                 $thongbao = "<h4>Thêm thành công</h4>";
 
             }
@@ -185,6 +190,8 @@ if(isset($_GET['act'])) {
                 $tenphong = $_POST['tenphong'];
                 $giaphong = $_POST['giaphong'];
                 $ngaydatphong = $_POST['ngaydatphong'];
+                $ngaytraphong = $_POST['ngaytraphong'];
+
                 
                 $img = $_FILES['anhphong']['name'];
                 $img_tmp = $_FILES['anhphong']['tmp_name'];
@@ -196,7 +203,7 @@ if(isset($_GET['act'])) {
                 $id_loaiphong = $_POST['id_loaiphong'];
                 $id_khach_san = $_POST['id_khach_san'];
 
-                updatePhong($id,$tenphong,$giaphong,$ngaydatphong,$img,$mota,$succhua,$id_loaiphong,$id_khach_san);
+                updatePhong($id,$tenphong,$giaphong,$ngaydatphong,$ngaytraphong,$img,$mota,$succhua,$id_loaiphong,$id_khach_san);
                 $thongbao = "<h4>Thêm thành công</h4>";
             }
             $listkhachsan = loadKhachSan();
@@ -204,7 +211,25 @@ if(isset($_GET['act'])) {
             $listPhong = loadPhong();
             include "phong/list.php";
             break;
-        
+            // quản lí người dùng
+            case 'quanlinguoidung':
+                $listTaiKhoan = loadAllTaiKhoan();
+                include "taikhoan/list.php";
+                break;
+            case 'quanlibinhluan':
+                $listBinhLuan = loadAllBinhLuan();
+                include "binhluan/list.php";
+                break;
+            case 'quanlinhantraphong':
+                $loadCheckInOutRoom = loadCheckInOutRoom();
+                include "booking/list.php";
+                break;
+            case 'quanlinhantraphong':
+                $listBieuDo = loadThongKe();
+                include "bieudo/bieudo.php";
+                break;
+             
+                    
 
         default:
             include "home.php";
